@@ -30,7 +30,8 @@
             android:label="Daftar" />
         <activity android:name=".ServiceRutin" />
         <activity android:name=".ServicePanggilan1" />
-        <activity android:name=".bookingservice"></activity>
+        <activity android:name=".bookingservice"
+            android:label="Booking Service"></activity>
     </application>
 
 </manifest>
