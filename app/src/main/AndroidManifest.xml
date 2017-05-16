@@ -16,17 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Daftar"
-            android:label="Daftar Member"/>
+        <activity
+            android:name=".Daftar"
+            android:label="Daftar Member" />
         <activity android:name=".ServicePanggilan" />
         <activity android:name=".TampilanMap" />
         <activity android:name=".ListBengkel" />
-        <activity android:name=".verifikasipass"
-            android:label="Masuk"/>
-        <activity android:name=".Daftar1"
-            android:label="Daftar"/>
+        <activity
+            android:name=".verifikasipass"
+            android:label="Masuk" />
+        <activity
+            android:name=".Daftar1"
+            android:label="Daftar" />
         <activity android:name=".ServiceRutin" />
-        <activity android:name=".ServicePanggilan1"></activity>
+        <activity android:name=".ServicePanggilan1" />
+        <activity android:name=".bookingservice"></activity>
     </application>
 
 </manifest>
