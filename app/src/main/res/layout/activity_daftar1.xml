@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_daftar"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_daftar1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,22 +10,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.lenovo.omecmart.Daftar">
+    tools:context="com.example.lenovo.omecmart.Daftar1">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="60dp">
 
         <TextView
             android:text="OMecMart"
             android:paddingLeft="90dp"
-
             android:textSize="40sp"
             android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" />
+            android:id="@+id/textView2"
+            android:fontFamily="arial" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,14 +34,13 @@
         android:layout_height="50dp"
         android:background="#eff0f2">
 
+
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="50dp"
             android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/email"
-            android:id="@+id/imageView5" />
-
-
+            android:id="@+id/imageView2" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -52,11 +51,8 @@
             android:hint="Email (nama@gmail.com)"
             android:textColorHint="@android:color/black"
             android:ems="10"
-            android:id="@+id/editTextEmail"
-            android:layout_weight="0.03"
-            android:textSize="14sp"
-            android:fontFamily="arial" />
-
+            android:id="@+id/editText10"
+            android:layout_weight="0.03" />
 
     </LinearLayout>
 
@@ -68,24 +64,20 @@
 
         <ImageView
             android:layout_width="30dp"
-            app:srcCompat="@drawable/akun"
             android:paddingLeft="10dp"
-            android:layout_height="50dp"></ImageView>
-
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/akun"
+            android:id="@+id/imageView3" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPersonName"
+            android:hint="Nama"
+            android:textColorHint="@android:color/black"
             android:paddingLeft="10dp"
             android:ems="10"
-            android:id="@+id/editTextNama"
-            android:fontFamily="arial"
-            android:textSize="14sp"
-            android:hint="Nama"
-            android:textColorHint="#000"
-            android:textColor="?attr/colorPrimary" />
-
+            android:id="@+id/editText12" />
     </LinearLayout>
 
     <LinearLayout
@@ -108,23 +100,21 @@
             android:paddingLeft="10dp"
             android:layout_height="match_parent"
             android:inputType="textPersonName"
-            android:text="+62"
-            android:textColor="@android:color/black"
+            android:hint="+62"
+            android:textColorHint="@android:color/black"
             android:ems="10"
-            android:id="@+id/editText13"
-            android:fontFamily="arial"
-            android:textSize="14sp" />
+            android:id="@+id/editText13" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editTextNomor"
-></EditText>
+            android:id="@+id/editText14"
+            android:layout_weight="1" />
+
 
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -132,31 +122,30 @@
         android:background="#eff0f2">
 
         <ImageView
-            android:id="@+id/imageView10"
             android:layout_width="30dp"
-            android:layout_height="50dp"
             android:paddingLeft="10dp"
-            app:srcCompat="@drawable/lokasi" />
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lokasi"
+            android:id="@+id/imageLokasi1" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPersonName"
+            android:hint="Alamat User"
+            android:textColorHint="@android:color/black"
             android:paddingLeft="10dp"
             android:ems="10"
-            android:id="@+id/editTextAlamat"
-            android:fontFamily="arial"
-            android:textSize="14sp"
-            android:hint="Alamatt"
-            android:textColorHint="#000"
-            android:textColor="?attr/colorPrimary" />
+            android:id="@+id/editText20" />
     </LinearLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#eff0f2">
+        android:background="#eff0f2"
+        android:weightSum="1">
 
         <ImageView
             android:layout_width="30dp"
@@ -170,22 +159,18 @@
             android:layout_height="match_parent"
             android:inputType="textPassword"
             android:ems="10"
-            android:hint="Kata Sandi"
+            android:hint=" Kata Sandi"
             android:textColorHint="@android:color/black"
-            android:id="@+id/editTextPassword"
-            android:layout_weight="0.94"
-            android:fontFamily="arial"
-            android:textSize="14sp" />
-
+            android:id="@+id/editText15"
+            android:layout_weight="0.94" />
 
         <ImageButton
-            android:layout_width="33dp"
-            android:layout_height="wrap_content"
+            android:layout_width="28dp"
+            android:layout_height="37dp"
             app:srcCompat="@drawable/sandi"
             android:id="@+id/imageButton3"
             android:background="#eff0f2"
             android:scaleType="fitCenter" />
-
 
     </LinearLayout>
 
@@ -205,17 +190,19 @@
         <Button
             android:text="Daftar"
             android:textColor="@android:color/white"
-            android:layout_width="match_parent"
+            android:layout_width="323dp"
             android:background="#187bb6"
             android:layout_height="37dp"
-            android:id="@+id/buttonRegister" />
-   </LinearLayout>
+            android:id="@+id/button3"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
+        android:paddingTop="10dp"
         android:background="#eff0f2"
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="60dp">
 
         <TextView
             android:text="Dengan mendaftar, Saya setuju dengan ketentuan layanan dan kebijakan privasi"
@@ -231,19 +218,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewLogin"
+        <EditText
+            android:layout_marginTop="10sp"
             android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:layout_weight="0.09"
-            android:background="#FFFFFF"
-            android:textAlignment="center"
-            android:text=" Sudah Punya Akun? Masuk"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Sudah punya akun?"
+            android:paddingLeft="50dp"
+            android:ems="10"
+            android:id="@+id/editText18" />
+
+        <Button
+            android:layout_marginTop="10sp"
+            android:text="Masuk"
+            android:textSize="17sp"
             android:textColor="#187bb6"
-            android:textSize="18sp" />
+            android:background="#fefefe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_weight="1" />
+
 
     </LinearLayout>
-
 </LinearLayout>
-
-
