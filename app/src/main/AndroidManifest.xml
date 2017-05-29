@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lenovo.omecmart">
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+
         <activity
             android:name=".Daftar"
             android:label="Daftar Member" />
@@ -31,6 +42,7 @@
         <activity android:name=".ServiceRutin" />
         <activity android:name=".ServicePanggilan1" />
         <activity android:name=".home"></activity>
+
     </application>
 
 </manifest>
