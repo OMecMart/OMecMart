@@ -14,14 +14,55 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ImageButton btn = (ImageButton) findViewById(R.id.imageButton13);
-                btn.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnsp = (ImageButton) findViewById(R.id.imageButton13);
+                btnsp.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent i = new Intent (home.this, ServicePanggilan.class);
+                        Intent i = new Intent (home.this, ListBengkel.class);
                         startActivity(i);
 
                     }
                 });
+
+        ImageButton btnhelp = (ImageButton) findViewById(R.id.imageButtonHelp);
+        btnhelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent (home.this, help2.class);
+                startActivity(i);
+
+            }
+        });
+
+        ImageButton btn = (ImageButton) findViewById(R.id.imageButtonProfil);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent (home.this, Profil.class);
+                startActivity(i);
+
+            }
+        });
+
+        ImageButton booking = (ImageButton) findViewById(R.id.buttonBookingService);
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent (home.this, ListBengkel.class);
+                startActivity(i);
+
+            }
+        });
+
+        ImageButton btnterdekat = (ImageButton) findViewById(R.id.imageButton15);
+        btnterdekat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent (home.this, Maps.class);
+                startActivity(i);
+
+            }
+        });
         }
     }
+

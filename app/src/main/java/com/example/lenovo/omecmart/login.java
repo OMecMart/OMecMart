@@ -22,22 +22,118 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class login extends AppCompatActivity {
-    private EditText editTextUsername, editTextPassword;
-    private Button buttonLogin;
+    public static final String KEY_USERNAME="username";
+    public static final String KEY_PASSWORD="password";
+
+    private EditText editTextUsername;
+    private EditText editTextPassword;
     private ProgressDialog progressDialog;
+
+    private String username;
+    private String password;
+
+
+    /*private EditText editTextUsername, editTextPassword;
+    private Button buttonLogin;
+    private ProgressDialog progressDialog;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-       /* if(SharedPrefManager.getInstance(this).isLoggedIn()){
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
             startActivity(new Intent(this, home.class));
             return;
         }
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        Button MASUK=(Button) findViewById(R.id.buttonLogin);
+        Button Daftar=(Button) findViewById(R.id.button3);
+        progressDialog = new ProgressDialog(this);
+
+        progressDialog.setMessage("Please wait...");
+
+
+        Daftar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View df){
+                Intent reg=new Intent(login.this, Daftar1.class);
+                startActivity(reg);
+            }
+        });
+
+        MASUK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userLogin();
+            }
+        });
+    }
+
+    private void userLogin() {
+        username = editTextUsername.getText().toString().trim();
+        password = editTextPassword.getText().toString().trim();
+
+        progressDialog.show();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_LOGIN,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            if(jsonObject.getBoolean("status")){
+                                SharedPrefManager.getInstance(getApplicationContext())
+                                        .userLogin(
+                                            jsonObject.getInt("id"),
+                                            jsonObject.getString("nama"),
+                                            jsonObject.getString("email"),
+                                            jsonObject.getString("alamat"),
+                                            jsonObject.getString("telephone")
+
+                                );
+                                Toast.makeText(getApplicationContext(), jsonObject.getString("message"),
+                                        Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(getApplicationContext(), home.class));
+                                finish();
+                            }else {
+                                    Toast.makeText(getApplicationContext(), jsonObject.getString("message"),
+                                            Toast.LENGTH_LONG).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), e.toString(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(login.this,error.toString(),Toast.LENGTH_LONG ).show();
+                    }
+                }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> map = new HashMap<String,String>();
+                map.put(KEY_USERNAME,username);
+                map.put(KEY_PASSWORD,password);
+                return map;
+            }
+        };
+
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+    }
+}
+
+
+
+
+
+        /*editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonLogin =(Button) findViewById(R.id.buttonLogin);
 
@@ -54,7 +150,7 @@ public class login extends AppCompatActivity {
 
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
-              Constants.URL_LOGIN,
+                Constants.URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -64,8 +160,8 @@ public class login extends AppCompatActivity {
                             if(!obj.getBoolean("error")){
                                 SharedPrefManager.getInstance(getApplicationContext())
                                         .userLogin(
-                                                obj.getInt("id_user"),
-                                                obj.getString("username"),
+                                                obj.getInt("id"),
+                                                obj.getString("nama"),
                                                 obj.getString("email")
                                         );
                                 startActivity(new Intent(getApplicationContext(), home.class));
@@ -107,7 +203,7 @@ public class login extends AppCompatActivity {
     public void onClick(View view) {
         if(view == buttonLogin){
             userLogin();
-        }*/
+        }
     }
-}
+}*/
 

@@ -10,4 +10,5 @@ public class verifikasipass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verifikasipass);
     }
+
 }

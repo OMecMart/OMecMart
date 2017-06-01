@@ -1,48 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lenovo.omecmart">
-    
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".login"
+            android:label="Login" />
+        <activity android:name=".SplashScreen">
 
-                <category android:name="android.intent.category.LAUNCHER" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-
-        <activity
-            android:name=".Daftar"
-            android:label="Daftar Member" />
-        <activity android:name=".ServicePanggilan" />
         <activity android:name=".TampilanMap" />
-        <activity android:name=".ListBengkel" />
+        <activity
+            android:name=".home"
+            android:label="Omecmart" />
+        <activity android:name=".ListBengkel"
+            android:label="Pilih Bengkel"></activity>
         <activity
             android:name=".verifikasipass"
             android:label="Masuk" />
         <activity
             android:name=".Daftar1"
             android:label="Daftar" />
-        <activity android:name=".ServiceRutin" />
-        <activity android:name=".ServicePanggilan1" />
-        <activity android:name=".home"></activity>
+        <activity android:name=".ServiceRutin"
+            android:label="Pilih Layanan"
+            >
+        </activity>
+        <activity android:name=".ServicePanggilan" >
 
+        </activity>
+        <activity
+            android:name=".Profil"
+            android:label="Profil" />
+        <activity
+            android:name=".help"
+            android:label="Bantuan" />
+        <activity
+            android:name=".help2"
+            android:label="Bantuan" />
+        <activity
+            android:name=".help3"
+            android:label="Bantuan" />
+        <activity
+            android:name=".bokingservice"
+            android:label="Bantuan"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Maps"
+            android:label="@string/title_activity_maps">
+
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            ></activity>
     </application>
 
 </manifest>

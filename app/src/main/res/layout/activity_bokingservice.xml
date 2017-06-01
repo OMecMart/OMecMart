@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_booking_service"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.lenovo.omecmart.bokingservice"
+    android:background="#eff0f2"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fefefe"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <GridLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#fefefe"
+            ></GridLayout>
+
+        <ImageButton
+            android:id="@+id/imageButtonLokasi"
+            android:layout_width="33dp"
+            android:layout_height="38dp"
+            android:background="#fefefe"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lokasi3"
+            android:paddingTop="10dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20sp"
+            android:hint="Masukkan alamat lengkap user"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#eff0f2"
+        ></GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fefefe"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <GridLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#fefefe"
+            ></GridLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="25dp"
+            android:layout_height="36dp"
+            android:background="#fefefe"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/tlp"
+            android:paddingTop="10dp"/>
+
+        <GridLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#fefefe"
+            ></GridLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20sp"
+            android:hint="Masukkan nomor telepon user"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#eff0f2"
+        >
+
+
+    </GridLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fefefe"
+        android:layout_weight="0.07">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120sp"
+            android:background="#187bb6"
+            android:text="Pilih Bengkel"
+            android:textColor="#fefefe"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="1">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#eff0f2"
+            />
+
+        <TextView
+            android:text="Waktu"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:textAlignment="center"
+            android:background="#fefefe" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#fefefe"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker2"
+                android:layout_weight="1" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:layout_weight="1" />
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="189dp"
+            android:layout_height="88dp"
+            app:srcCompat="@drawable/book"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="90sp"
+            android:background="#eff0f2"
+            android:layout_weight="0.70"
+            android:onClick="OnBoking"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -4,21 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item android:id="@+id/action_settings"
-        android:title="Action"
-        android:orderInCategory="100"
-        app:showAsAction="never"/>
 
-    <item android:id="@+id/menuSatu"
-        android:title="Menu Satu"/>
-
-    <item android:title="Menu Dua"
-        android:id="@+id/menuDua"/>
-
-    <item android:id="@+id/menuTiga"
-        android:title="Menu Tiga"/>
 
     <item android:id="@+id/shareItem"
-        android:title="Share Ini"/>
+        android:title="Chat Melalui..."/>
 
 </menu>
